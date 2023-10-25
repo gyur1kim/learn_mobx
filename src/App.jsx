@@ -1,6 +1,8 @@
 import TodoList from './Stores/TodoListStore'
 import Todo from './Stores/TodoStore'
+
 import TodoListView from './Components/TodoListView'
+import ComputedTotal from './Components/OrderLine';
 
 const store = new TodoList([
   new Todo("Get Coffee"),
@@ -9,7 +11,11 @@ const store = new TodoList([
 
 function App() {
   return (
-    <TodoListView todoList={store} />
+    <>
+      <TodoListView todoList={store} />
+      <hr />
+      <ComputedTotal />
+    </>
   )
 }
 

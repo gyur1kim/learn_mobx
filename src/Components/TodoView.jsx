@@ -5,7 +5,7 @@ const TodoView = observer(({todo}) =>
 		<label>
 			<input
 				type="checkbox"
-				checked={todo.isFinished}
+				defaultChecked={todo.isFinished}
 				onClick={() => todo.toggle()}
 			/>
 			{todo.title}
